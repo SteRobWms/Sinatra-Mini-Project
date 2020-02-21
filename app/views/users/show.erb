@@ -1,0 +1,38 @@
+<h1> Single User information </h1>
+
+<h2>Username:</h2>
+<label> <%= @user.username %> </label>
+
+
+
+
+
+<br/>
+<h2>Polls:</h2><br/>
+<% i = 0 %>
+<% while i < @user.polls.length do %>
+  <a href="/titles/<%=@user.polls[i].id%>">
+  <label> <%= @questions[i] %> </label></a><br/>
+  <label> <%= @responses[i] %> </label>
+  <br/>
+  <br/>
+<% i += 1%>
+<% end %>
+
+<button>
+    <a href="/users/<%= @user.id %>/edit">
+        Edit User
+    </a>
+</button>
+
+<button>
+    <a href="/users">
+        Back to All Users
+    </a>
+</button>
+
+<form action="/users/<%= @user.id %>" method="post">
+<input type="hidden" name="_method" value="delete">
+
+<input type="submit" value="Delete User"/>
+</form>
