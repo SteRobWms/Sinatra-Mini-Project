@@ -1,0 +1,15 @@
+<form action="/users/<%= @user.id %>" method="post">
+<input type="hidden" name="_method" value="patch"/>
+
+<h2>Username</h2>
+<input type="text" name="user[username]" value="<%=@user.username%>" placeholder="Enter new username"/>
+
+
+<h2>Gender</h2>
+<input type="text" name="user[gender]" value="<%=@user.gender%>" placeholder="Enter new gender"/>
+
+<br/>
+<br/>
+
+<input type="submit" value="Finish Editing">
+</form>
