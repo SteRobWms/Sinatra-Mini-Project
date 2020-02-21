@@ -1,0 +1,6 @@
+<h1>W & W Poll App</h1>
+<ul>
+    <%@polls.each do |poll|%>
+    <li><a href ="/polls/<%=poll.id%>"><%=poll.question%> by <%=poll_creator(poll).username%></a></li>
+    <%end%>
+</ul>

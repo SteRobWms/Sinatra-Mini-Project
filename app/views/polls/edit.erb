@@ -1,0 +1,12 @@
+<h1>W & W Poll App</h1>
+<h2>Editing <%=@poll.question%>
+
+<form action="/polls/<%=@poll.id%>" method="post">
+<input type="hidden" name="_method" value="patch"/>
+
+<label>Poll Question:</label>
+<input type="text" name="question" value="<%= @poll.question%>"/>
+
+<input type="submit"/>
+
+</form>
