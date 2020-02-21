@@ -17,7 +17,9 @@ class PollsController < ApplicationController
 
     get "/polls/:id" do
         @poll = current_poll
+        binding.pry
         erb :show
+        
     end
 
     patch "/polls/:id" do
