@@ -11,7 +11,7 @@
 <h2>Polls:</h2><br/>
 <% i = 0 %>
 <% while i < @user.polls.length do %>
-  <a href="/titles/<%=@user.polls[i].id%>">
+  <a href="/polls/<%=@user.polls[i].id%>">
   <label> <%= @questions[i] %> </label></a><br/>
   <label> <%= @responses[i] %> </label>
   <br/>
